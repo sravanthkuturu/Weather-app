@@ -14,6 +14,7 @@ class CityNameSearchVC: UIViewController {
     @IBOutlet weak var cityNameTextField: UITextField!
     
     let citySearchViewModel = CityNameSearchViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -36,11 +37,12 @@ class CityNameSearchVC: UIViewController {
         } else {
             
             guard NetworkConnectivity.isConnected else {
+                // Hiding the laoder if the internet connection is lost while making the API call.
+                AppLoader().hideProgress()
                 // Show internet connection alert
                 presentAlert(withTitle: "No internet connection", message: "Please check your internet connection and try again!")
                 return
             }
-            
             
             AppLoader().showProgress(status: "Loading...", blockUI: true)
             CityNameSearchService.shared.processCityWeatherServiceAPIRequest(cityName: cityNameTextField.text ?? "") { [weak self] (model, error) in

@@ -9,7 +9,7 @@
 import XCTest
 @testable import WeatherAppCodingExcercise
 
-class WeatherAppCodingExcerciseTests: XCTestCase {
+class CityListTests: XCTestCase {
 
     var httpClient: AppHttpClient?
     var mockSession: MockURLSesion?
@@ -23,25 +23,12 @@ class WeatherAppCodingExcerciseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
-    
     func testWeatherSuccessBuildable() {
-        let buildable = CityNameSearchBuildable.urlRequest(cityName: "Dubai")
+        let buildable = CityNameSearchBuildable.urlRequest(cityName: "New York")
         let queryParams = buildable.queryParams
         queryParams.forEach { (param) in
             XCTAssertTrue(param.key == "q")
-            XCTAssertTrue(param.value == "Dubai")
+            XCTAssertTrue(param.value == "New York")
 
         }
         XCTAssert(buildable.methodType == .get)
@@ -51,11 +38,11 @@ class WeatherAppCodingExcerciseTests: XCTestCase {
     
     func testWeatherAPISuccessResponse() {
         
-        let buildable = CityNameSearchBuildable.urlRequest(cityName: "Dubai")
+        let buildable = CityNameSearchBuildable.urlRequest(cityName: "New York")
         let queryParams = buildable.queryParams
         queryParams.forEach { (param) in
             XCTAssertTrue(param.key == "q")
-            XCTAssertTrue(param.value == "Dubai")
+            XCTAssertTrue(param.value == "New York")
             
         }
         XCTAssert(buildable.methodType == .get)
@@ -80,11 +67,11 @@ class WeatherAppCodingExcerciseTests: XCTestCase {
     
     func testWeatherAPIFailureResponse() {
         
-        let buildable = CityNameSearchBuildable.urlRequest(cityName: "Dubai")
+        let buildable = CityNameSearchBuildable.urlRequest(cityName: "New York")
         let queryParams = buildable.queryParams
         queryParams.forEach { (param) in
             XCTAssertTrue(param.key == "q")
-            XCTAssertTrue(param.value == "Dubai")
+            XCTAssertTrue(param.value == "New York")
             
         }
         XCTAssert(buildable.methodType == .get)
@@ -108,6 +95,4 @@ class WeatherAppCodingExcerciseTests: XCTestCase {
         XCTAssertEqual(resume, true)
     }
     
-   
-
 }

@@ -9,8 +9,12 @@
 import Foundation
 
 class CityNameSearchViewModel {
+    
     func validateTextField(value: String?) -> (Bool, String) {
-        if value?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? false {
+        guard let inputString = value else {
+            return (false, "Please enter city name")
+        }
+        if inputString.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             return (false, "Please enter city name")
         }
         return (true, "")

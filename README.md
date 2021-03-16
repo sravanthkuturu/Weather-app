@@ -29,9 +29,11 @@ Only "SVProgressHud" pod is used in order to should the loader and block the UI 
 
     
 # Project UI work flow:
-![City list screen](https://user-images.githubusercontent.com/20845121/111344567-b7369e80-8639-11eb-902f-39d6424f3b3e.png)
-![Details screen](https://user-images.githubusercontent.com/20845121/111344589-bb62bc00-8639-11eb-9d9b-35311eda9772.png)
+![Validation](https://user-images.githubusercontent.com/20845121/111344630-c4538d80-8639-11eb-9655-41d8ac775ef1.png)
 ![No internet screen](https://user-images.githubusercontent.com/20845121/111344593-bdc51600-8639-11eb-8f28-ddafaa98538c.png)
 ![Search screen](https://user-images.githubusercontent.com/20845121/111344618-c0c00680-8639-11eb-950f-6fc24ebf2c03.png)
-![Validation](https://user-images.githubusercontent.com/20845121/111344630-c4538d80-8639-11eb-9655-41d8ac775ef1.png)
+![City list screen](https://user-images.githubusercontent.com/20845121/111344567-b7369e80-8639-11eb-902f-39d6424f3b3e.png)
+![Details screen](https://user-images.githubusercontent.com/20845121/111344589-bb62bc00-8639-11eb-9d9b-35311eda9772.png)
+
+
 

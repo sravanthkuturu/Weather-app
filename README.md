@@ -22,18 +22,11 @@ WeatherAppCodingExcercise
 # Third Party Used:
 Only "SVProgressHud" pod is used in order to should the loader and block the UI interaction.
 
-NFR:
+# NFR:
 1. Validation of the empty input string is implemented.
 2. UI is blocked until response does not come from API in order to avoid the unnecessary user interation since the response is being fetched from server.
 3. Internet connectivity check has been placed before calling the API, in order to avoid unncessary API call which will result in failure mode.
 
     
 # Project UI work flow:
-
-1. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/1.PNG
-2. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/2.PNG
-3. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/3.PNG
-4. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/4.PNG
-5. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/5.PNG
-6. https://github.com/prorohit/SMD-WeatherApp/blob/master/ScreenShots/UI/6.PNG
 
